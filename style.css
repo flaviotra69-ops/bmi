@@ -1,0 +1,143 @@
+/* Importazione font sans-serif moderno (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Stili base specificati */
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Imposta il font Inter come primario */
+    background-color: #f1f3f5; /* Sfondo grigio chiaro della pagina */
+    color: #1f2328; /* Colore scuro del testo */
+    margin: 0; /* Rimuove i margini esterni predefiniti */
+    padding: 0 60px; /* Spazio laterale 60px a sinistra e destra */
+    min-height: 100vh; /* Altezza minima pari al 100% della schermata visibile */
+    display: flex; /* Attiva il layout Flexbox */
+    justify-content: center; /* Centra orizzontalmente gli elementi */
+    align-items: center; /* Centra verticalmente gli elementi */
+    box-sizing: border-box; /* Include padding nelle dimensioni totali dell'elemento */
+}
+
+/* Titolo della pagina */
+.page-title {
+    font-size: 32px; /* Dimensione del font a 32px */
+    font-weight: 700; /* Testo in grassetto */
+    margin-bottom: 24px; /* Spazio di 24px sotto il titolo */
+    text-align: center; /* Testo allineato al centro */
+    letter-spacing: -0.5px; /* Spaziatura tra lettere leggermente ridotta */
+    color: #1f2328; /* Colore scuro del testo */
+}
+
+/* Box / Card principale */
+.bmi-card {
+    background-color: #ffffff; /* Sfondo bianco della scheda */
+    width: 360px; /* Larghezza fissa di 360px */
+    max-width: 100%; /* Larghezza massima del 100% per adattamento su schermi piccoli */
+    padding: 24px; /* Spaziatura interna di 24px su tutti i lati */
+    border-radius: 12px; /* Angoli della scheda arrotondati a 12px */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombra leggera attorno alla scheda */
+    box-sizing: border-box; /* Include padding nelle dimensioni */
+}
+
+/* Stili per input e form */
+.form-group {
+    margin-bottom: 16px; /* Spazio inferiore di 16px per separare ogni campo */
+}
+
+.form-label {
+    display: block; /* Rende l'etichetta un elemento blocco */
+    width: 100%; /* Larghezza al 100% del contenitore */
+    font-size: 14px; /* Dimensione testo a 14px */
+    font-weight: 600; /* Testo in semi-grassetto */
+    margin-bottom: 6px; /* Spazio di 6px sotto l'etichetta */
+    color: #1f2328; /* Colore scuro per l'etichetta */
+}
+
+.form-input {
+    display: block; /* Rende il campo di input un elemento blocco */
+    width: 100%; /* Larghezza al 100% del contenitore */
+    padding: 10px 12px; /* Spaziatura interna: 10px sopra/sotto, 12px ai lati */
+    border: 1px solid #d0d7de; /* Bordo sottile grigio chiaro */
+    border-radius: 8px; /* Angoli dell'input arrotondati a 8px */
+    font-size: 14px; /* Dimensione del testo inserito dall'utente */
+    color: #1f2328; /* Colore scuro del testo inserito */
+    background-color: #ffffff; /* Sfondo bianco dell'input */
+    outline: none; /* Rimuove l'outline azzurro/nero di default del browser */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Transizione fluida */
+    box-sizing: border-box; /* Include padding nelle dimensioni */
+}
+
+.form-input:focus {
+    border-color: #1f2328; /* Cambia colore del bordo in scuro quando il campo è selezionato */
+    box-shadow: 0 0 0 3px rgba(31, 35, 40, 0.12); /* Aggiunge un alone visivo attorno al campo in focus */
+}
+
+/* Pulsante Submit specificato */
+.submit-btn {
+    display: block; /* Rende il pulsante un elemento blocco */
+    width: 100%; /* Larghezza al 100% della scheda */
+    padding: 12px; /* Spaziatura interna di 12px */
+    background-color: #1f2328; /* Sfondo scuro per il pulsante */
+    color: #f1f3f5; /* Testo del pulsante di colore chiaro */
+    border: none; /* Rimuove il bordo predefinito */
+    border-radius: 8px; /* Angoli del pulsante arrotondati a 8px */
+    font-size: 15px; /* Dimensione del testo a 15px */
+    font-weight: 600; /* Testo in semi-grassetto */
+    cursor: pointer; /* Cambia il cursore del mouse in una manina */
+    transition: opacity 0.2s ease, transform 0.1s ease; /* Transizioni fluide per hover e click */
+    margin-top: 20px; /* Spazio di 20px sopra il pulsante */
+}
+
+.submit-btn:hover {
+    opacity: 0.92; /* Riduzione opacità al passaggio del mouse */
+}
+
+.submit-btn:active {
+    transform: scale(0.98); /* Effetto di compressione visiva al click */
+}
+
+/* Risultato del calcolo */
+.result-box {
+    margin-top: 20px; /* Spazio di 20px sopra il box del risultato */
+    padding: 16px; /* Spaziatura interna di 16px */
+    border-radius: 8px; /* Angoli arrotondati a 8px */
+    text-align: center; /* Allineamento del testo al centro */
+    animation: fadeIn 0.3s ease-in-out; /* Animazione di dissolvenza in ingresso */
+    background-color: #f6f8fa; /* Sfondo grigio chiarissimo */
+    border: 1px solid #d0d7de; /* Bordo grigio chiaro */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); } /* Stato iniziale dell'animazione */
+    to { opacity: 1; transform: translateY(0); } /* Stato finale dell'animazione */
+}
+
+.category-text {
+    font-weight: 700; /* Testo della categoria in grassetto */
+    margin-top: 4px; /* Spazio superiore di 4px */
+}
+
+/* Pulsante per effettuare un nuovo calcolo */
+.back-btn {
+    display: block; /* Rende il link un elemento blocco */
+    width: 100%; /* Larghezza al 100% della card */
+    text-align: center; /* Allinea il testo al centro */
+    padding: 10px; /* Spaziatura interna di 10px */
+    background-color: #1f2328; /* Sfondo scuro */
+    color: #f1f3f5; /* Testo chiaro */
+    border-radius: 8px; /* Angoli arrotondati a 8px */
+    font-size: 14px; /* Dimensione del font a 14px */
+    font-weight: 600; /* Testo semi-grassetto */
+    text-decoration: none; /* Rimuove la sottolineatura standard del link */
+    margin-top: 16px; /* Spazio superiore di 16px */
+    box-sizing: border-box; /* Include padding nelle dimensioni */
+    transition: opacity 0.2s ease; /* Transizione fluida dell'opacità */
+}
+
+.back-btn:hover {
+    opacity: 0.9; /* Riduzione dell'opacità al passaggio del mouse */
+}
+
+/* Responsività per schermi molto piccoli */
+@media (max-width: 480px) {
+    body {
+        padding: 0 20px; /* Riduzione padding laterale su schermi piccolissimi per evitare overflow */
+    }
+}
